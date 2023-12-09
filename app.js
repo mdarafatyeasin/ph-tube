@@ -6,7 +6,7 @@ const handleCategory = async () => {
     data.data.forEach((category) => {
       const div = document.createElement("div");
       div.innerHTML = `
-              <button id="category-btn" onclick="handleLoadData('${category.category_id}')" class="px-5 py-2 bg-gray-400 hover:bg-gray-300 text-sm font-medium rounded">
+              <button onclick="handleLoadData('${category.category_id}')" class="px-5 py-2 text-white bg-gray-400 hover:bg-gray-300 text-sm font-medium rounded">
               ${category.category}
               </button> 
           `;
@@ -22,8 +22,8 @@ const handleCategory = async () => {
     );
     const data = await res.json();
 
-    console.log(data.data)
-    console.log(data.data[0].others.views)
+    // console.log(data.data)
+    // console.log(data.data[0].others.views)
 
 
     const errorContainer = document.getElementById("error-container");
